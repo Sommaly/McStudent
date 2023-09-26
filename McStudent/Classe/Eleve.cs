@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace McStudent
+namespace McStudent.Classe
 {
     internal class Eleve
     {
@@ -27,9 +27,9 @@ namespace McStudent
         {
             return this.prenom;
         }
-        public void setMdp(String nvMotdepasse)
+        public void setMdp(String nvMdp)
         {
-            this.motdepasse = nvMotdepasse;
+            this.motdepasse = nvMdp;
         }
         public void setPseudo(String nvPseudo)
         {
