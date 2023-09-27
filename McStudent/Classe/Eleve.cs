@@ -11,12 +11,16 @@ namespace McStudent.Classe
         public string pseudo {  get; set; }
         public string prenom { get; set; }
         public string motdepasse { get; set; }
+        public Promo promo { get; set; }
+        public Groupe groupe { get; set; }
 
         public Eleve(string pseudo, string prenom, string motdepasse)
         {
             this.pseudo = pseudo;
             this.prenom = prenom;
             this.motdepasse = motdepasse;
+            this.promo = null;
+            this.groupe = null;
         }
     }
 }

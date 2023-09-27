@@ -9,7 +9,7 @@ namespace McStudent.Classe
     internal class Groupe
     {
         public string nom {  get; set; }
-
+        public List<Eleve> Eleves { get; set; }
         public Groupe(string nom)
         {
             this.nom = nom;

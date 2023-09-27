@@ -14,6 +14,7 @@ namespace McStudent.Classe
         public DateTime dteFin { get; set; }
         public int note { get; set; }
         public Boolean isActif {  get; set; }
+        public Groupe groupe { get; set; }
 
         public TP(string titre, string description, DateTime dteDebut, DateTime dteFin, int note)
         {
@@ -23,6 +24,7 @@ namespace McStudent.Classe
             this.dteFin = dteFin;
             this.note = note;
             this.isActif = false;
+            this.groupe = null;
         }
     }
 }

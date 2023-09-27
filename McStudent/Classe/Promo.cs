@@ -9,7 +9,7 @@ namespace McStudent.Classe
     internal class Promo
     {
         public string nom {  get; set; }
-
+        public List<Eleve> Eleves { get; set; }
         public Promo(string nom)
         {
             this.nom = nom;
