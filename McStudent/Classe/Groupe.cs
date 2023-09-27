@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace McStudent.Classe
 {
-    internal class Promo
+    internal class Groupe
     {
         public string nom {  get; set; }
 
-        public Promo(string nom)
+        public Groupe(string nom)
         {
             this.nom = nom;
         }
