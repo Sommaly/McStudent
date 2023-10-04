@@ -9,6 +9,11 @@
       Title="ListePromo">
 
     <Grid>
-        <Label Content="PAGE LISTE PROMO" HorizontalAlignment="Center" Height="26" VerticalAlignment="Center" Width="86"/>
+        <DataGrid Name="liste_promo" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="1*" Header="Classe" Binding="{Binding nom_promo}" />
+                <DataGridTextColumn Width="1*" Header="Nombre d'élèves" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

@@ -1,6 +1,8 @@
 ﻿using McStudent.Classe;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +15,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Security.AccessControl;
+using System.Configuration;
 
 namespace McStudent
 {
@@ -24,9 +28,12 @@ namespace McStudent
         public MainWindow()
         {
             InitializeComponent();
-            Eleve testEleve;
-            testEleve = new Classe.Eleve("pseudo","prenom","motdepasse");
-           
+            Eleve testEleve = new Classe.Eleve("pseudo","prenom","motdepasse");
+            Eleve testEleve2 = new Classe.Eleve("pseudo2", "prenom2", "motdepasse2");
+            Eleve testEleve3 = new Classe.Eleve("pseudo3", "prenom3", "motdepasse3");
+            this.main_frame.Content = new ListeTp();
+
+            // BASE DE DONNEEES
         }
 
         private void btn_voirTp_Click(object sender, RoutedEventArgs e)
