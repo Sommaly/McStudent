@@ -39,9 +39,6 @@ namespace McStudent
             this.main_frame.Content = new ListePromo();
         }
 
-        private void btn_login_Click(object sender, RoutedEventArgs e)
-        {
-            this.main_frame.Content = new Login();
-        }
+
     }
 }

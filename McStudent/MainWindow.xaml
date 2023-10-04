@@ -12,7 +12,6 @@
             <Button Content="Voir TP" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Name="btn_voirTp" Width="110" Height="23" Click="btn_voirTp_Click"/>
             <Button Content="Voir promo" HorizontalAlignment="Center" VerticalAlignment="Center" Name="btn_voirPromo" Height="22" Width="110" Click="btn_voirPromo_Click"/>
             <Button Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_voirPromo_Copy" Height="22" Width="110" Margin="0,254,0,0"/>
-            <Button Content="Login" HorizontalAlignment="Left" Height="33" Margin="25,323,0,0" VerticalAlignment="Top" Width="40" Name="btn_login" Click="btn_login_Click"/>
 
         </Grid>
         <Frame x:Name="main_frame" Content="fsdfdsfsfdfsdfsdf" HorizontalAlignment="Left" Height="414" Margin="142,0,0,0" VerticalAlignment="Center" Width="648" NavigationUIVisibility="Hidden"/>
