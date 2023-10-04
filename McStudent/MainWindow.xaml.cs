@@ -38,7 +38,5 @@ namespace McStudent
         {
             this.main_frame.Content = new ListePromo();
         }
-
-
     }
 }
