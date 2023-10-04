@@ -41,7 +41,7 @@ namespace McStudent
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            this.main_frame.Content = new Login();
+            this.main_frame.Content = new Login2();
         }
     }
 }
