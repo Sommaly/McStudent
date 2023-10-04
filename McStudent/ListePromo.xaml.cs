@@ -1,5 +1,4 @@
-﻿using McStudent.Classe;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,15 +16,13 @@ using System.Windows.Shapes;
 namespace McStudent
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour ListePromo.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ListePromo : Page
     {
-        public MainWindow()
+        public ListePromo()
         {
             InitializeComponent();
-            Eleve test;
-            test = new Classe.Eleve("pseudo","prenom","motdepasse");
         }
     }
 }
