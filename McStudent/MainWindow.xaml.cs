@@ -24,8 +24,9 @@ namespace McStudent
         public MainWindow()
         {
             InitializeComponent();
-            Eleve test;
-            test = new Classe.Eleve("pseudo","prenom","motdepasse");
+            Eleve testEleve;
+            testEleve = new Classe.Eleve("pseudo","prenom","motdepasse");
+           
         }
 
         private void btn_voirTp_Click(object sender, RoutedEventArgs e)
@@ -36,6 +37,11 @@ namespace McStudent
         private void btn_voirPromo_Click(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new ListePromo();
+        }
+
+        private void btn_login_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new Login();
         }
     }
 }

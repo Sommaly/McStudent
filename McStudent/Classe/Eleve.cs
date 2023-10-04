@@ -13,7 +13,8 @@ namespace McStudent.Classe
         public string motdepasse { get; set; }
         public Promo promo { get; set; }
         public Groupe groupe { get; set; }
-        public List<Tache> Taches { get; set; }
+
+        public Dictionary<Tache, Boolean> Valider { get; set; }
 
         public Eleve(string pseudo, string prenom, string motdepasse)
         {
