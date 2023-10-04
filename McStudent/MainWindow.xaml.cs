@@ -24,8 +24,9 @@ namespace McStudent
         public MainWindow()
         {
             InitializeComponent();
-            Eleve test;
-            test = new Classe.Eleve("pseudo","prenom","motdepasse");
+            Eleve testEleve;
+            testEleve = new Classe.Eleve("pseudo","prenom","motdepasse");
+           
         }
 
         private void btn_voirTp_Click(object sender, RoutedEventArgs e)
