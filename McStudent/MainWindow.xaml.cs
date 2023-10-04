@@ -27,5 +27,15 @@ namespace McStudent
             Eleve test;
             test = new Classe.Eleve("pseudo","prenom","motdepasse");
         }
+
+        private void btn_voirTp_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new ListeTp();
+        }
+
+        private void btn_voirPromo_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new ListePromo();
+        }
     }
 }
