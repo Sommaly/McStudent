@@ -8,6 +8,7 @@ namespace McStudent.Classe
 {
     internal class Eleve
     {
+        public int id {  get; set; }
         public string pseudo {  get; set; }
         public string prenom { get; set; }
         public string motdepasse { get; set; }
@@ -16,8 +17,9 @@ namespace McStudent.Classe
 
         public Dictionary<Tache, Boolean> Valider { get; set; }
 
-        public Eleve(string pseudo, string prenom, string motdepasse)
+        public Eleve(int id,string pseudo, string prenom, string motdepasse)
         {
+            this.id = id;
             this.pseudo = pseudo;
             this.prenom = prenom;
             this.motdepasse = motdepasse;

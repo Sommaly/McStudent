@@ -8,14 +8,16 @@ namespace McStudent.Classe
 {
     internal class Tache
     {
+        public int id { get; set; }
         public string nom {  get; set; }
         public int points { get; set; }
         public string commentaire {  get; set; }
         public Boolean isObligatoire {  get; set; }
         public string reponse {  get; set; }
         public TP TP { get; set; }
-        public Tache(string nom, int points, string commentaire, Boolean isObligatoire, string reponse)
+        public Tache(int id,string nom, int points, string commentaire, Boolean isObligatoire, string reponse)
         {
+            this.id = id;
             this.nom = nom;
             this.points = points;
             this.commentaire = commentaire;

@@ -8,9 +8,11 @@ namespace McStudent.Classe
 {
     internal class Groupe
     {
+        public int id {  get; set; }
         public string nom {  get; set; }
-        public Groupe(string nom)
+        public Groupe(int id,string nom)
         {
+            this.id = id;
             this.nom = nom;
         }
     }

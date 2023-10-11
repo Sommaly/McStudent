@@ -8,10 +8,12 @@ namespace McStudent.Classe
 {
     internal class Promo
     {
+        public int id { get; set; }
         public string nom {  get; set; }
         public List<Eleve> Eleves { get; set; }
-        public Promo(string nom)
+        public Promo(int id,string nom)
         {
+            this.id = id;
             this.nom = nom;
         }
     }

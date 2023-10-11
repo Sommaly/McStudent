@@ -8,6 +8,7 @@ namespace McStudent.Classe
 {
     internal class TP
     {
+        public int id { get; set; }
         public string titre {  get; set; }
         public string description { get; set; }
         public DateTime dteDebut { get; set; }
@@ -16,8 +17,9 @@ namespace McStudent.Classe
         public Boolean isActif {  get; set; }
         public Groupe groupe { get; set; }
 
-        public TP(string titre, string description, DateTime dteDebut, DateTime dteFin, int note)
+        public TP(int id,string titre, string description, DateTime dteDebut, DateTime dteFin, int note)
         {
+            this.id = id;
             this.titre = titre;
             this.description = description;
             this.dteDebut = dteDebut;
