@@ -13,7 +13,7 @@
             <Button Content="Voir promo" HorizontalAlignment="Center" VerticalAlignment="Center" Name="btn_voirPromo" Height="22" Width="110" Click="btn_voirPromo_Click"/>
             <Button Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_dashboard" Height="22" Width="110" Margin="0,254,0,0"/>
             <Button Content="Login" HorizontalAlignment="Center" Height="22" Margin="0,408,0,0" VerticalAlignment="Top" Width="110" Name="btn_login" Click="btn_login_Click"/>
-            <Button Content="Créer un TP" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_creerTP" Height="22" Width="110" Margin="0,292,0,0"/>
+            <Button Content="Créer un TP" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_creerTP" Height="22" Width="110" Margin="0,292,0,0" Click="btn_creerTP_Click"/>
 
         </Grid>
         <Frame x:Name="main_frame" Content="" HorizontalAlignment="Left" Height="414" Margin="142,0,0,0" VerticalAlignment="Center" Width="648" NavigationUIVisibility="Hidden"/>

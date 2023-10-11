@@ -16,6 +16,5 @@
         <Button Content="Se connecter" HorizontalAlignment="Center" Margin="0,276,0,0" VerticalAlignment="Top" Height="33" Width="200" Name="btn_connecter" Click="btn_connecter_Click"/>
         <Label Content="Connexion" HorizontalAlignment="Center" Margin="0,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.448,0.544" FontSize="36" FontWeight="Bold"/>
         <Label Content="Identifiants incorrectes" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Background="#00000000" Foreground="Red" Visibility="Hidden" Name="lbl_error"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="400,336,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

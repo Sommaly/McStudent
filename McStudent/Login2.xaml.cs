@@ -52,7 +52,7 @@ namespace McStudent
 
                     if (dt.Rows.Count > 0)
                     {
-                        MessageBox.Show("Connection réussit !");
+                        MessageBox.Show("Connexion réussie !");
                     }
                     else
                     {
