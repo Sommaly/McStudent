@@ -9,7 +9,20 @@
       Title="CreerTP">
 
     <Grid>
-        <Label Content="CREER UN TP" HorizontalAlignment="Center" Margin="0,239,0,0" VerticalAlignment="Top"/>
+        <Button Name="btn_creer" Content="Créer tp" HorizontalAlignment="Left" Margin="320,348,0,0" VerticalAlignment="Top" Height="38" Width="122" Click="btn_creer_Click"/>
+        <DataGrid Name="creer_tp" Margin="20,22,25,305" AutoGenerateColumns="True"/>
+        <TextBox x:Name="tbx_dtedebut" HorizontalAlignment="Left" Margin="186,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_dtefin" HorizontalAlignment="Left" Margin="503,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_actif" HorizontalAlignment="Left" Margin="503,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_note" HorizontalAlignment="Left" Margin="503,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_description" HorizontalAlignment="Left" Margin="186,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_titre" HorizontalAlignment="Left" Margin="186,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Titre : " HorizontalAlignment="Left" Margin="119,177,0,0" VerticalAlignment="Top"/>
+        <Label Content="Note : " HorizontalAlignment="Left" Margin="420,269,0,0" VerticalAlignment="Top"/>
+        <Label Content="Est actif : " HorizontalAlignment="Left" Margin="404,224,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date de fin : " HorizontalAlignment="Left" Margin="380,177,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date de début : " HorizontalAlignment="Left" Margin="71,269,0,0" VerticalAlignment="Top"/>
+        <Label Content="Description : " HorizontalAlignment="Left" Margin="87,225,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

@@ -9,16 +9,8 @@
       Title="ListeTp">
 
     <Grid>
-        <DataGrid Name="liste_tp" AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Width="1*" Header="Nom du TP" Binding="{Binding titre}" />
-                <DataGridTextColumn Width="1*" Header="Description" Binding="{Binding description}" />
-                <DataGridTextColumn Width="1*" Header="Classe" Binding="{Binding nom_promo}" />
-                <DataGridTextColumn Width="1*" Header="Groupe" Binding="{Binding nom_groupe}" />
-                <DataGridTextColumn Width="1*" Header="Date de début" Binding="{Binding dte_debut}" />
-                <DataGridTextColumn Width="1*" Header="Date de fin" Binding="{Binding dte_fin}" />
-                <DataGridTextColumn Width="1*" Header="Note" Binding="{Binding note}" />
-            </DataGrid.Columns>
+        <DataGrid Name="liste_tp" AutoGenerateColumns="True">
+
         </DataGrid>
     </Grid>
 </Page>

@@ -58,7 +58,7 @@ namespace McStudent
 
                     if (sqlDataReader.Read())
                     {
-                        MessageBox.Show("Connection réussit !");
+                        MessageBox.Show("Connexion réussie !");
                     }
                     else
                     {
