@@ -11,7 +11,7 @@
             <Image HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.506,0.51" Source="/logo.png"/>
             <Button Content="Voir TP" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Name="btn_voirTp" Width="110" Height="23" Click="btn_voirTp_Click"/>
             <Button Content="Voir promo" HorizontalAlignment="Center" VerticalAlignment="Center" Name="btn_voirPromo" Height="22" Width="110" Click="btn_voirPromo_Click"/>
-            <Button Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_dashboard" Height="22" Width="110" Margin="0,254,0,0"/>
+            <Button Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_dashboard" Height="22" Width="110" Margin="0,254,0,0" Click="btn_dashboard_Click"/>
             <Button Content="Login" HorizontalAlignment="Center" Height="22" Margin="0,408,0,0" VerticalAlignment="Top" Width="110" Name="btn_login" Click="btn_login_Click"/>
             <Button Content="Créer un TP" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_creerTP" Height="22" Width="110" Margin="0,292,0,0" Click="btn_creerTP_Click"/>
 
