@@ -50,5 +50,15 @@ namespace McStudent
         {
             this.main_frame.Content = new Login2();
         }
+
+        private void btn_dashboard_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new Dashboard();
+        }
+
+        private void btn_creerTP_Click(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new CreerTP();
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<Page x:Class="McStudent.CreerTP"
+﻿<Page x:Class="McStudent.Dashboard"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,10 +6,10 @@
       xmlns:local="clr-namespace:McStudent"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="CreerTP">
+      Title="Dashboard">
 
     <Grid>
-        <Label Content="CREER UN TP" HorizontalAlignment="Center" Margin="0,239,0,0" VerticalAlignment="Top"/>
+        <Label Content="DASHBOARD" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 </Page>

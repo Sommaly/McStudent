@@ -39,18 +39,24 @@ namespace McStudent
             }
             else
             {
+
                 try
                 {
-                    SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI");
-                    SqlCommand cmd = new SqlCommand("select * from dbo_eleve where pseudo = @pseudo and mdp = @mdp", con);
+                    SqlConnection con = new SqlConnection("Data Source=SOMMALY\\SQLEXPRESS;Initial Catalog = mcstudent;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("select * from dbo.eleve", con);
                     cmd.Parameters.AddWithValue("@pseudo", tbx_pseudo.Text);
                     cmd.Parameters.AddWithValue("@mdp", tbx_mdp.Text);
-                    SqlDataAdapter da = new SqlDataAdapter(cmd);
-                    DataTable dt = new DataTable();
 
-                    da.Fill(dt);
+                    SqlDataReader sqlDataReader = cmd.ExecuteReader();
+                    
 
-                    if (dt.Rows.Count > 0)
+                 //   SqlDataAdapter da = new SqlDataAdapter(cmd);
+                   // DataTable dt = new DataTable();
+
+                   // da.Fill(dt);
+
+                    if (sqlDataReader.Read())
                     {
                         MessageBox.Show("Connection réussit !");
                     }
