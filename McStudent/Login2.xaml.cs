@@ -42,7 +42,8 @@ namespace McStudent
 
                 try
                 {
-                    SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI"); con.Open();
+                    //SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI"); con.Open();
+                    SqlConnection con = new SqlConnection("Data Source=SOMMALY\\SQLEXPRESS;Initial Catalog = mcstudent;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
                     SqlCommand cmd = new SqlCommand("select * from dbo.eleve", con);
                     cmd.Parameters.AddWithValue("@pseudo", tbx_pseudo.Text);
                     cmd.Parameters.AddWithValue("@mdp", tbx_mdp.Text);
@@ -67,33 +68,6 @@ namespace McStudent
                 catch (Exception ex)
                 {
                     MessageBox.Show("" + ex);
-                    try
-                    {
-                        SqlConnection con = new SqlConnection("Data Source=SOMMALY\\SQLEXPRESS;Initial Catalog = mcstudent;Integrated Security=True;Connect Timeout=30;Encrypt=False;"); SqlCommand cmd = new SqlCommand("select * from dbo.eleve", con);
-                        cmd.Parameters.AddWithValue("@pseudo", tbx_pseudo.Text);
-                        cmd.Parameters.AddWithValue("@mdp", tbx_mdp.Text);
-
-                        SqlDataReader sqlDataReader = cmd.ExecuteReader();
-
-
-                        // SqlDataAdapter da = new SqlDataAdapter(cmd);
-                        // DataTable dt = new DataTable();
-
-                        // da.Fill(dt);
-
-                        if (sqlDataReader.Read())
-                        {
-                            MessageBox.Show("Connexion réussie !");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Champs invalides");
-                        }
-                    } catch
-                    {
-                        MessageBox.Show("" + ex);
-
-                    }
                 }
             }
         }
