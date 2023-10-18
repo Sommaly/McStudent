@@ -5,17 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:McStudent"
         mc:Ignorable="d"
-        Title="" Height="450" Width="800" Background="White">
-    <Grid>
-        <Grid HorizontalAlignment="Left" Height="450" Margin="0,0,0,0" VerticalAlignment="Center" Width="130" Background="#5E96E9">
-            <Image HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.506,0.51" Source="/logo.png"/>
-            <Button Content="Voir TP" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Name="btn_voirTp" Width="110" Height="23" Click="btn_voirTp_Click"/>
-            <Button Content="Voir promo" HorizontalAlignment="Center" VerticalAlignment="Center" Name="btn_voirPromo" Height="22" Width="110" Click="btn_voirPromo_Click"/>
-            <Button Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_dashboard" Height="22" Width="110" Margin="0,254,0,0" Click="btn_dashboard_Click"/>
-            <Button Content="Login" HorizontalAlignment="Center" Height="22" Margin="0,408,0,0" VerticalAlignment="Top" Width="110" Name="btn_login" Click="btn_login_Click"/>
-            <Button Content="Créer un TP" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_creerTP" Height="22" Width="110" Margin="0,292,0,0" Click="btn_creerTP_Click"/>
+        Title="" Height="620" Width="920" Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        >
+    <Border Background="#272537" CornerRadius="20">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200">
+
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75">
+
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Frame x:Name="main_frame" Margin="210,38,-710,-535"></Frame>
+            <Image Source="/logo.png"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="20,0,0,0">
+            </Image>
+            <StackPanel Margin="10,93,-10,-535">
+                <RadioButton Content="Dashboard"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked"/>
+                <RadioButton Content="Voir les TP"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_1"/>
+                <RadioButton Content="Voir les promotions"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_2"/>
+                <RadioButton Content="Connexion"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_3"/>
+                <RadioButton Content="Créer un TP"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_4"/>
+            </StackPanel>
 
         </Grid>
-        <Frame x:Name="main_frame" Content="" HorizontalAlignment="Left" Height="414" Margin="142,0,0,0" VerticalAlignment="Center" Width="648" NavigationUIVisibility="Hidden"/>
-    </Grid>
+
+    </Border>
 </Window>

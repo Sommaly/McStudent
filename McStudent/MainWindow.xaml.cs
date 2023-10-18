@@ -33,27 +33,27 @@ namespace McStudent
             // BASE DE DONNEEES
         }
 
-        private void btn_voirTp_Click(object sender, RoutedEventArgs e)
-        {
-            this.main_frame.Content = new ListeTp();
-        }
-
-        private void btn_voirPromo_Click(object sender, RoutedEventArgs e)
-        {
-            this.main_frame.Content = new ListePromo();
-        }
-
-        private void btn_login_Click(object sender, RoutedEventArgs e)
-        {
-            this.main_frame.Content = new Login2();
-        }
-
-        private void btn_dashboard_Click(object sender, RoutedEventArgs e)
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new Dashboard();
         }
 
-        private void btn_creerTP_Click(object sender, RoutedEventArgs e)
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new ListeTp();
+        }
+
+        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new ListePromo();
+        }
+
+        private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new Login2();
+        }
+
+        private void RadioButton_Checked_4(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new CreerTP();
         }
