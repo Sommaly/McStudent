@@ -5,24 +5,31 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:McStudent"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="414" d:DesignWidth="648"
       Title="CreerTP">
 
     <Grid>
-        <Button Name="btn_creer" Content="Créer tp" HorizontalAlignment="Left" Margin="320,348,0,0" VerticalAlignment="Top" Height="38" Width="122" Click="btn_creer_Click"/>
-        <DataGrid Name="creer_tp" Margin="20,22,25,305" AutoGenerateColumns="True"/>
-        <TextBox x:Name="tbx_dtedebut" HorizontalAlignment="Left" Margin="186,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbx_dtefin" HorizontalAlignment="Left" Margin="503,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbx_actif" HorizontalAlignment="Left" Margin="503,229,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbx_note" HorizontalAlignment="Left" Margin="503,273,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbx_description" HorizontalAlignment="Left" Margin="186,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbx_titre" HorizontalAlignment="Left" Margin="186,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Titre : " HorizontalAlignment="Left" Margin="119,177,0,0" VerticalAlignment="Top"/>
-        <Label Content="Note : " HorizontalAlignment="Left" Margin="420,269,0,0" VerticalAlignment="Top"/>
-        <Label Content="Est actif : " HorizontalAlignment="Left" Margin="404,224,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date de fin : " HorizontalAlignment="Left" Margin="380,177,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date de début : " HorizontalAlignment="Left" Margin="71,269,0,0" VerticalAlignment="Top"/>
-        <Label Content="Description : " HorizontalAlignment="Left" Margin="87,225,0,0" VerticalAlignment="Top"/>
-
+        <Button Name="btn_creer" Content="Créer tp" HorizontalAlignment="Center" Margin="0,343,0,0" VerticalAlignment="Top" Height="38" Width="122" Click="btn_creer_Click"/>
+        <TextBox x:Name="tbx_note" HorizontalAlignment="Left" Margin="415,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_description" HorizontalAlignment="Left" Margin="116,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_titre" HorizontalAlignment="Left" Margin="116,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Titre : " HorizontalAlignment="Left" Margin="68,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="Note : " HorizontalAlignment="Left" Margin="338,28,0,0" VerticalAlignment="Top"/>
+        <Label Content="Description : " HorizontalAlignment="Left" Margin="36,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date de début : " HorizontalAlignment="Left" Margin="13,151,0,0" VerticalAlignment="Top"/>
+        <Label Content="Date de fin : " HorizontalAlignment="Left" Margin="324,151,0,0" VerticalAlignment="Top"/>
+        <Calendar Name="dte_debut" HorizontalAlignment="Left" Margin="113,151,0,0" VerticalAlignment="Top"/>
+        <Calendar Name="dte_fin" HorizontalAlignment="Left" Margin="401,151,0,0" VerticalAlignment="Top"/>
+        <Label Content="Classe :" HorizontalAlignment="Left" Margin="335,59,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="liste_promo" HorizontalAlignment="Left" Margin="401,64,0,0" VerticalAlignment="Top" Width="134">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Fill="{Binding nom_promo}" Width="16" Height="16" Margin="0,2,5,2" />
+                        <TextBlock Text="{Binding nom_promo}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
     </Grid>
 </Page>

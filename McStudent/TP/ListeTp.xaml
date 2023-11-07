@@ -5,11 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:McStudent"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="414" d:DesignWidth="648"
       Title="ListeTp">
 
     <Grid>
-        <DataGrid Name="liste_tp" AutoGenerateColumns="True">
+        <DataGrid x:Name="liste_tp" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding id_tp}"/>
+                <DataGridTextColumn Header="Titre" Binding="{Binding titre}"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding description}"/>
+                <DataGridTextColumn Header="Date de début" Binding="{Binding dte_debut}"/>
+                <DataGridTextColumn Header="Date de fin" Binding="{Binding dte_fin}"/>
+                <DataGridTextColumn Header="Barème" Binding="{Binding note}"/>
+            </DataGrid.Columns>
 
         </DataGrid>
     </Grid>

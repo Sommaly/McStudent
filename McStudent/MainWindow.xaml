@@ -7,15 +7,22 @@
         mc:Ignorable="d"
         Title="" Height="450" Width="800" Background="White">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="450" Margin="0,0,0,0" VerticalAlignment="Center" Width="130" Background="#5E96E9">
+        <Grid HorizontalAlignment="Left" Height="450" VerticalAlignment="Center" Width="142" Background="#5E96E9">
             <Image HorizontalAlignment="Center" Height="80" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.506,0.51" Source="/logo.png"/>
-            <Button Content="Voir TP" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Name="btn_voirTp" Width="110" Height="23" Click="btn_voirTp_Click"/>
-            <Button Content="Voir promo" HorizontalAlignment="Center" VerticalAlignment="Center" Name="btn_voirPromo" Height="22" Width="110" Click="btn_voirPromo_Click"/>
-            <Button Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_dashboard" Height="22" Width="110" Margin="0,254,0,0" Click="btn_dashboard_Click"/>
-            <Button Content="Login" HorizontalAlignment="Center" Height="22" Margin="0,408,0,0" VerticalAlignment="Top" Width="110" Name="btn_login" Click="btn_login_Click"/>
-            <Button Content="Créer un TP" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_creerTP" Height="22" Width="110" Margin="0,292,0,0" Click="btn_creerTP_Click"/>
-
+            <Grid Name="admin" HorizontalAlignment="Left" Height="450" VerticalAlignment="Center" Width="142">
+                <Button Content="Voir TP" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Name="btn_voirTp" Width="110" Height="23" Click="btn_voirTp_Click"/>
+                <Button Content="Voir promo" HorizontalAlignment="Center" VerticalAlignment="Center" Name="btn_voirPromo" Height="22" Width="110" Click="btn_voirPromo_Click"/>
+                <Button Content="Dashboard" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_dashboard" Height="22" Width="110" Margin="0,254,0,0" Click="btn_dashboard_Click"/>
+                <Button Content="Login" HorizontalAlignment="Center" Height="22" Margin="0,408,0,0" VerticalAlignment="Top" Width="110" Name="btn_login" Click="btn_login_Click"/>
+                <Button Content="Créer un TP" HorizontalAlignment="Center" VerticalAlignment="Top" x:Name="btn_creerTP" Height="22" Width="110" Margin="0,292,0,0" Click="btn_creerTP_Click"/>
+            </Grid>
+            <Grid Name="eleve" HorizontalAlignment="Left" Height="450" VerticalAlignment="Center" Width="142" Visibility="Hidden">
+                <Button Content="Voir TP" HorizontalAlignment="Center" Margin="0,174,0,0" VerticalAlignment="Top" Name="btn_voirTpEleve" Width="110" Height="23"/>
+                <Button Content="Changer de mdp" HorizontalAlignment="Center" Margin="0,209,0,0" VerticalAlignment="Top" Name="btn_changerMdp" Width="110" Height="23"/>
+                <Button Content="Se deconnecter" HorizontalAlignment="Center" Margin="0,402,0,0" VerticalAlignment="Top" Name="btn_deconnexion" Width="110" Height="23"/>
+            </Grid>
         </Grid>
-        <Frame x:Name="main_frame" Content="" HorizontalAlignment="Left" Height="414" Margin="142,0,0,0" VerticalAlignment="Center" Width="648" NavigationUIVisibility="Hidden"/>
+        
+        <Frame x:Name="main_frame" Content="" HorizontalAlignment="Left" Height="414" Margin="142,0,0,0" VerticalAlignment="Center" Width="658" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

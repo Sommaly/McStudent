@@ -25,13 +25,13 @@ namespace McStudent
         public ListePromo()
         {
             InitializeComponent();
-            LoadGrid();
+            charger_promo();
         }
 
         //SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI");
         SqlConnection con = new SqlConnection("Data Source=SOMMALY\\SQLEXPRESS;Initial Catalog = mcstudent;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
 
-        public void LoadGrid() {
+        public void charger_promo() {
             SqlCommand cmd = new SqlCommand("select * from dbo.promo", con);
             DataTable dt = new DataTable();
             con.Open();
