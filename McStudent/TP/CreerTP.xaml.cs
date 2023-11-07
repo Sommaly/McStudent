@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using McStudent.Classe;
+using System.Text.RegularExpressions;
 
 namespace McStudent
 {
@@ -45,7 +46,20 @@ namespace McStudent
 
         private void btn_creer_Click(object sender, RoutedEventArgs e)
         {
-
+            con.Open();
+            string query = "INSERT INTO dbo.TP (id_TP, titre, description, dte_debut, dte_fin, is_actif, note) VALUES (@id_TP, @titre, @description, @dte_debut, @dte_fin, @is_actif, @note)";
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                command.Parameters.AddWithValue("@id_TP", 4);
+                command.Parameters.AddWithValue("@titre", tbx_titre.Text);
+                command.Parameters.AddWithValue("@description", tbx_description.Text);
+                command.Parameters.AddWithValue("@dte_debut", dte_debut.SelectedDate);
+                command.Parameters.AddWithValue("@dte_fin", dte_fin.SelectedDate);
+                command.Parameters.AddWithValue("@is_actif", 0);
+                command.Parameters.AddWithValue("@note", tbx_note.Text);
+                command.ExecuteNonQuery();
+            }
+            con.Close();
         }
     }
 }

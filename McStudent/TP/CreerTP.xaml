@@ -18,10 +18,10 @@
         <Label Content="Description : " HorizontalAlignment="Left" Margin="36,62,0,0" VerticalAlignment="Top"/>
         <Label Content="Date de début : " HorizontalAlignment="Left" Margin="13,151,0,0" VerticalAlignment="Top"/>
         <Label Content="Date de fin : " HorizontalAlignment="Left" Margin="324,151,0,0" VerticalAlignment="Top"/>
-        <Calendar Name="dte_debut" HorizontalAlignment="Left" Margin="113,151,0,0" VerticalAlignment="Top"/>
-        <Calendar Name="dte_fin" HorizontalAlignment="Left" Margin="401,151,0,0" VerticalAlignment="Top"/>
+        <Calendar x:Name="dte_debut" HorizontalAlignment="Left" Margin="113,151,0,0" VerticalAlignment="Top"/>
+        <Calendar x:Name="dte_fin" HorizontalAlignment="Left" Margin="401,151,0,0" VerticalAlignment="Top"/>
         <Label Content="Classe :" HorizontalAlignment="Left" Margin="335,59,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name="liste_promo" HorizontalAlignment="Left" Margin="401,64,0,0" VerticalAlignment="Top" Width="134">
+        <ComboBox x:Name="liste_promo" HorizontalAlignment="Left" Margin="401,64,0,0" VerticalAlignment="Top" Width="134">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
