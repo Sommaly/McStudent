@@ -57,5 +57,10 @@ namespace McStudent
         {
             this.main_frame.Content = new CreerTP();
         }
+
+        private void btn_voirTpEleve_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

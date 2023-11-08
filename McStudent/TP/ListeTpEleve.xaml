@@ -1,12 +1,12 @@
-﻿<Page x:Class="McStudent.ListeTp"
+﻿<Page x:Class="McStudent.TP.ListeTpEleve"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:McStudent"
+      xmlns:local="clr-namespace:McStudent.TP"
       mc:Ignorable="d" 
       d:DesignHeight="414" d:DesignWidth="648"
-      Title="ListeTp">
+      Title="ListeTpEleve">
 
     <Grid>
         <DataGrid x:Name="liste_tp" AutoGenerateColumns="False" ColumnWidth="*">
