@@ -28,7 +28,7 @@ namespace McStudent
         public MainWindow()
         {
             InitializeComponent();
-            this.main_frame.Content = new ListeTp();
+            this.main_frame.Content = new Login2();
 
             // BASE DE DONNEEES
         }

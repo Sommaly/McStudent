@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace McStudent
 {
     /// <summary>
@@ -25,6 +26,7 @@ namespace McStudent
         public Login2()
         {
             InitializeComponent();
+
         }
 
         private void btn_connecter_Click(object sender, RoutedEventArgs e)
