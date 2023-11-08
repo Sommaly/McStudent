@@ -51,7 +51,7 @@ namespace McStudent
                     SqlDataReader sqlDataReader = cmd.ExecuteReader();
                     
 
-                    // SqlDataAdapter da = new SqlDataAdapter(cmd); ffffr
+                    // SqlDataAdapter da = new SqlDataAdapter(cmd);
                     // DataTable dt = new DataTable();
 
                     // da.Fill(dt);

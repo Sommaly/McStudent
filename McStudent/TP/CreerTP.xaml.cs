@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using McStudent.Classe;
+using System.Text.RegularExpressions;
 
 namespace McStudent
 {
@@ -25,25 +27,39 @@ namespace McStudent
         public CreerTP()
         {
             InitializeComponent();
-            LoadGrid();
+            charger_promo();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI");
+        //SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI");
+        SqlConnection con = new SqlConnection("Data Source=SOMMALY\\SQLEXPRESS;Initial Catalog = mcstudent;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
 
-        public void LoadGrid()
+        public void charger_promo()
         {
-            SqlCommand cmd = new SqlCommand("select * from dbo.TP", con);
+            SqlCommand cmd = new SqlCommand("select * from dbo.promo", con);
             DataTable dt = new DataTable();
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
             dt.Load(sdr);
             con.Close();
-            creer_tp.ItemsSource = dt.DefaultView;
+            liste_promo.ItemsSource = dt.DefaultView;
         }
 
         private void btn_creer_Click(object sender, RoutedEventArgs e)
         {
-
+            con.Open();
+            string query = "INSERT INTO dbo.TP (id_TP, titre, description, dte_debut, dte_fin, is_actif, note) VALUES (@id_TP, @titre, @description, @dte_debut, @dte_fin, @is_actif, @note)";
+            using (SqlCommand command = new SqlCommand(query, con))
+            {
+                command.Parameters.AddWithValue("@id_TP", 4);
+                command.Parameters.AddWithValue("@titre", tbx_titre.Text);
+                command.Parameters.AddWithValue("@description", tbx_description.Text);
+                command.Parameters.AddWithValue("@dte_debut", dte_debut.SelectedDate);
+                command.Parameters.AddWithValue("@dte_fin", dte_fin.SelectedDate);
+                command.Parameters.AddWithValue("@is_actif", 0);
+                command.Parameters.AddWithValue("@note", tbx_note.Text);
+                command.ExecuteNonQuery();
+            }
+            con.Close();
         }
     }
 }
