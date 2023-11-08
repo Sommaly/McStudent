@@ -5,11 +5,11 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:McStudent.TP"
       mc:Ignorable="d" 
-      d:DesignHeight="414" d:DesignWidth="648"
+      d:DesignHeight="450" d:DesignWidth="800"
       Title="ListeTpEleve">
 
     <Grid>
-        <DataGrid x:Name="liste_tp" AutoGenerateColumns="False" ColumnWidth="*">
+        <DataGrid x:Name="liste_tp_eleve" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding id_tp}"/>
                 <DataGridTextColumn Header="Titre" Binding="{Binding titre}"/>
