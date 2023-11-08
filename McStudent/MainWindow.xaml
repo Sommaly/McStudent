@@ -29,40 +29,28 @@
                        HorizontalAlignment="Left"
                        Margin="20,0,0,0">
             </Image>
-            <StackPanel Margin="10,93,-10,-535">
+            <StackPanel Name="navbar_admin" Margin="10,93,-10,-535" Visibility="Hidden">
                 <RadioButton Content="Dashboard"
-                             Visibility="hidden"
-                             Foreground="White"
-                             Name="rbtn_dashboard"
-                             FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked"/>
+                                 Foreground="White"
+                                 FontSize="14"
+                                 Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_dashboard"/>
                 <RadioButton Content="Voir les TP"
                              Foreground="White"
-                             Visibility="hidden"
-                             Name="rbtn_voir_tp"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_1"/>
                 <RadioButton Content="Voir les promotions"
                              Foreground="White"
-                             Visibility="hidden"
-                             Name="rbtn_promo"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_2"/>
                 <RadioButton Content="Connexion"
                              Foreground="White"
-                             Visibility="hidden"
                              FontSize="14"
-                             Name="rbtn_login"
                              Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_3"/>
                 <RadioButton Content="Créer un TP"
                              Foreground="White"
-                             Visibility="hidden"
                              FontSize="14"
-                             Name="rbtn_creer_tp"
                              Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_4"/>
             </StackPanel>
-
         </Grid>
-
     </Border>
 </Window>

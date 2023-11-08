@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,30 +15,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace McStudent
+namespace McStudent.TP
 {
     /// <summary>
-    /// Logique d'interaction pour ListePromo.xaml
+    /// Logique d'interaction pour ListeTpEleve.xaml
     /// </summary>
-    public partial class ListePromo : Page
+    public partial class ListeTpEleve : Page
     {
-        public ListePromo()
+        public ListeTpEleve()
         {
             InitializeComponent();
-            charger_promo();
+            charger_tp_eleve();
         }
-
         //SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI");
         SqlConnection con = new SqlConnection("Data Source=SOMMALY\\SQLEXPRESS;Initial Catalog = mcstudent;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
 
-        public void charger_promo() {
-            SqlCommand cmd = new SqlCommand("select * from dbo.promo", con);
+        public void charger_tp_eleve()
+        {
+            SqlCommand cmd = new SqlCommand("select * from dbo.TP", con);
             DataTable dt = new DataTable();
             con.Open();
             SqlDataReader sdr = cmd.ExecuteReader();
             dt.Load(sdr);
             con.Close();
-            liste_promo.ItemsSource = dt.DefaultView;
+            liste_tp_eleve.ItemsSource = dt.DefaultView;
         }
     }
 }

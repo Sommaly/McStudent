@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Security.AccessControl;
 using System.Configuration;
+using McStudent.TP;
 
 namespace McStudent
 {
@@ -33,29 +34,41 @@ namespace McStudent
             // BASE DE DONNEEES
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        private void RadioButton_Checked_dashboard(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new Dashboard();
         }
 
-        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        private void RadioButton_Checked_voirTp(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new ListeTp();
         }
 
-        private void RadioButton_Checked_2(object sender, RoutedEventArgs e)
+        private void RadioButton_Checked_voirPromo(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new ListePromo();
         }
 
-        private void RadioButton_Checked_3(object sender, RoutedEventArgs e)
+        private void RadioButton_Checked_connexion(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new Login2();
         }
 
-        private void RadioButton_Checked_4(object sender, RoutedEventArgs e)
+        private void RadioButton_Checked_creerTp(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new CreerTP();
+        }
+        private void RadioButton_Checked_voirTpEleve(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new ListeTpEleve();
+        }
+        private void RadioButton_Checked_changerMdp(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new ChangerMdp();
+        }
+        private void RadioButton_Checked_deconnexion(object sender, RoutedEventArgs e)
+        {
+            this.main_frame.Content = new Deconnexion();
         }
     }
 }
