@@ -46,20 +46,27 @@ namespace McStudent
 
         private void btn_creer_Click(object sender, RoutedEventArgs e)
         {
+            Classe.TP nouveauTP;
+            nouveauTP = new Classe.TP(5, tbx_titre.Text, tbx_description.Text, dte_debut.SelectedDate, dte_fin.SelectedDate, int.Parse(tbx_note.Text));
             con.Open();
             string query = "INSERT INTO dbo.TP (id_TP, titre, description, dte_debut, dte_fin, is_actif, note) VALUES (@id_TP, @titre, @description, @dte_debut, @dte_fin, @is_actif, @note)";
             using (SqlCommand command = new SqlCommand(query, con))
             {
-                command.Parameters.AddWithValue("@id_TP", 4);
-                command.Parameters.AddWithValue("@titre", tbx_titre.Text);
-                command.Parameters.AddWithValue("@description", tbx_description.Text);
-                command.Parameters.AddWithValue("@dte_debut", dte_debut.SelectedDate);
-                command.Parameters.AddWithValue("@dte_fin", dte_fin.SelectedDate);
-                command.Parameters.AddWithValue("@is_actif", 0);
-                command.Parameters.AddWithValue("@note", tbx_note.Text);
+                command.Parameters.AddWithValue("@id_TP", nouveauTP.id);
+                command.Parameters.AddWithValue("@titre", nouveauTP.titre);
+                command.Parameters.AddWithValue("@description", nouveauTP.description);
+                command.Parameters.AddWithValue("@dte_debut", nouveauTP.dteDebut);
+                command.Parameters.AddWithValue("@dte_fin", nouveauTP.dteFin);
+                command.Parameters.AddWithValue("@is_actif", nouveauTP.isActif);
+                command.Parameters.AddWithValue("@note", nouveauTP.note);
                 command.ExecuteNonQuery();
             }
             con.Close();
+            NavigationService.Navigate(new ListeTp());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
