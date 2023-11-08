@@ -37,20 +37,35 @@
                 <RadioButton Content="Voir les TP"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_1"/>
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_voirTp"/>
                 <RadioButton Content="Voir les promotions"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_2"/>
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_voirPromo"/>
                 <RadioButton Content="Connexion"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_3"/>
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_connexion"/>
                 <RadioButton Content="Créer un TP"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_4"/>
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_creerTp"/>
             </StackPanel>
+            <StackPanel Name="navbar_eleve" Margin="10,93,-10,-535">
+                <RadioButton Content="Voir les TP"
+                     Foreground="White"
+                     FontSize="14"
+                     Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_voirTpEleve"/>
+                <RadioButton Content="Changer de mot de passe"
+                     Foreground="White"
+                     FontSize="14"
+                     Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_changerMdp"/>
+                <RadioButton Content="Se déconnecter"
+                     Foreground="White"
+                     FontSize="14"
+                     Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_deconnexion"/>
+            </StackPanel>
+            
         </Grid>
     </Border>
 </Window>
