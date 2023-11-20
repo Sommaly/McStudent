@@ -66,9 +66,5 @@ namespace McStudent
         {
             this.main_frame.Content = new ChangerMdp();
         }
-        private void RadioButton_Checked_deconnexion(object sender, RoutedEventArgs e)
-        {
-            this.main_frame.Content = new Deconnexion();
-        }
     }
 }

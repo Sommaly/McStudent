@@ -5,23 +5,23 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:McStudent"
       mc:Ignorable="d" 
-      d:DesignHeight="414" d:DesignWidth="648"
+      d:DesignHeight="715" d:DesignWidth="1290"
       Title="CreerTP">
 
     <Grid>
-        <Button Name="btn_creer" Content="Créer tp" HorizontalAlignment="Center" Margin="0,366,0,0" VerticalAlignment="Top" Height="38" Width="122" Click="btn_creer_Click"/>
-        <TextBox x:Name="tbx_note" HorizontalAlignment="Left" Margin="434,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbx_description" HorizontalAlignment="Left" Margin="89,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="tbx_titre" HorizontalAlignment="Left" Margin="89,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Titre : " HorizontalAlignment="Left" Margin="37,35,0,0" VerticalAlignment="Top"/>
-        <Label Content="Note : " HorizontalAlignment="Left" Margin="361,31,0,0" VerticalAlignment="Top"/>
-        <Label Content="Description : " HorizontalAlignment="Left" Margin="0,62,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date de début : " HorizontalAlignment="Left" Margin="107,93,0,0" VerticalAlignment="Top"/>
-        <Label Content="Date de fin : " HorizontalAlignment="Left" Margin="456,93,0,0" VerticalAlignment="Top"/>
-        <Calendar x:Name="dte_debut" HorizontalAlignment="Left" Margin="65,121,0,0" VerticalAlignment="Top"/>
-        <Calendar x:Name="dte_fin" HorizontalAlignment="Left" Margin="405,121,0,0" VerticalAlignment="Top"/>
-        <Label Content="Classe :" HorizontalAlignment="Left" Margin="361,62,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="liste_promo" HorizontalAlignment="Left" Margin="434,64,0,0" VerticalAlignment="Top" Width="120">
+        <Button Name="btn_creer" Content="Créer tp" HorizontalAlignment="Center" Margin="0,650,0,0" VerticalAlignment="Top" Height="38" Width="122" Click="btn_creer_Click"/>
+        <TextBox x:Name="tbx_note" HorizontalAlignment="Left" Margin="747,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_description" HorizontalAlignment="Left" Margin="401,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbx_titre" HorizontalAlignment="Left" Margin="401,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Titre : " HorizontalAlignment="Left" Margin="349,41,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Note : " HorizontalAlignment="Left" Margin="673,37,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Description : " HorizontalAlignment="Left" Margin="312,68,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Date de début : " HorizontalAlignment="Left" Margin="419,99,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Date de fin : " HorizontalAlignment="Left" Margin="768,99,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Calendar x:Name="dte_debut" HorizontalAlignment="Left" Margin="377,97,0,0" VerticalAlignment="Top"/>
+        <Calendar x:Name="dte_fin" HorizontalAlignment="Left" Margin="717,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Classe :" HorizontalAlignment="Left" Margin="673,68,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <ComboBox x:Name="liste_promo" HorizontalAlignment="Left" Margin="747,70,0,0" VerticalAlignment="Top" Width="120">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
@@ -31,10 +31,9 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Label Name="lbl_tache1" Content="Tache 1 :" HorizontalAlignment="Left" Margin="114,306,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="tbx_tache1" HorizontalAlignment="Left" Margin="174,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Name="lbl_note1" Content="Note :" HorizontalAlignment="Left" Margin="314,306,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="tbx_note1" HorizontalAlignment="Left" Margin="361,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Ajouter une tâche" HorizontalAlignment="Left" Margin="65,339,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <StackPanel Orientation="Vertical">
+            <Button Name="creer_tache" Content="Ajouter une tâche" HorizontalAlignment="Left" Margin="600,290,0,0" Click="creer_tache_Click"/>
+            <StackPanel x:Name="dynamicControlsPanel" Margin="0"/>
+        </StackPanel>
     </Grid>
 </Page>

@@ -64,9 +64,41 @@ namespace McStudent
             con.Close();
             NavigationService.Navigate(new ListeTp());
         }
+        int compteur = 0;
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void creer_tache_Click(object sender, RoutedEventArgs e)
         {
+            compteur++;
+            for (int i = 0; i < compteur; i++)
+            {
+                // Créez une nouvelle TextBox
+                TextBox newTextBox = new TextBox();
+                newTextBox.Name = "tbx_tache" + compteur;
+                newTextBox.Width = 300;
+                newTextBox.Height = 17.96;
+                // Créez une nouvelle Label
+                Label newLabel = new Label();
+                newLabel.Content = "Tache "+compteur;
+                newLabel.Name = "lbl_tache" + compteur;
+                newLabel.Foreground = Brushes.White;
+
+                // Créez une nouvelle TextBox
+                TextBox newTextBox2 = new TextBox();
+                newTextBox2.Name = "tbx_note" + compteur;
+                newTextBox2.Width = 300;
+                newTextBox2.Height = 17.96;
+                // Créez une nouvelle Label
+                Label newLabel2 = new Label();
+                newLabel2.Content = "Note " + compteur;
+                newLabel2.Name = "lbl_note" + compteur;
+                newLabel2.Foreground = Brushes.White;
+
+                // Ajoutez la TextBox et la Label au StackPanel
+                dynamicControlsPanel.Children.Add(newLabel);
+                dynamicControlsPanel.Children.Add(newTextBox);
+                dynamicControlsPanel.Children.Add(newLabel2);
+                dynamicControlsPanel.Children.Add(newTextBox2);
+            }
         }
     }
 }
