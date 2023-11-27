@@ -9,6 +9,7 @@
         WindowStyle="None"
         ResizeMode="NoResize"
         AllowsTransparency="True"
+        
         >
     <Border Background="#272537" CornerRadius="20">
         <Grid>
@@ -64,8 +65,11 @@
                      Foreground="White"
                      FontSize="14"
                      Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_deconnexion"/>
+                <RadioButton Content="Quitter"
+                     Foreground="White"
+                     FontSize="14"
+                     Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_quit"/>
             </StackPanel>
-            
         </Grid>
     </Border>
 </Window>

@@ -26,11 +26,13 @@ namespace McStudent
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+          Eleve eleve;
+        
+        public MainWindow(Eleve e)
         {
             InitializeComponent();
-            this.main_frame.Content = new Login2();
-
+            this.main_frame.Content = new ListeTp(new Eleve(1, "seb", "seb", "seb"));
+            this.eleve = e;
             // BASE DE DONNEEES
         }
 
@@ -41,7 +43,7 @@ namespace McStudent
 
         private void RadioButton_Checked_voirTp(object sender, RoutedEventArgs e)
         {
-            this.main_frame.Content = new ListeTp();
+            this.main_frame.Content = new ListeTp(new Eleve(1, "seb", "seb", "seb"));
         }
 
         private void RadioButton_Checked_voirPromo(object sender, RoutedEventArgs e)
@@ -69,6 +71,11 @@ namespace McStudent
         private void RadioButton_Checked_deconnexion(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new Deconnexion();
+        }
+
+        private void RadioButton_quit(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -19,5 +19,6 @@
                 <DataGridTextColumn Header="Barème" Binding="{Binding note}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Label Content="" HorizontalAlignment="Left" Margin="144,0,0,0" VerticalAlignment="Center" Height="108" Width="167" Name="lbl_test"/>
     </Grid>
 </Page>

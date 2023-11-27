@@ -1,7 +1,7 @@
-﻿using System;
+﻿using McStudent.Classe;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,25 +12,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using McStudent.Classe;
 
 namespace McStudent
 {
     /// <summary>
-    /// Logique d'interaction pour Login2.xaml
+    /// Logique d'interaction pour Login.xaml
     /// </summary>
-    public partial class Login2 : Page
+    public partial class Login : Window
     {
-        public Login2()
+        public Login()
         {
             InitializeComponent();
-
         }
 
         private void btn_connecter_Click(object sender, RoutedEventArgs e)
         {
+
             if (tbx_pseudo.Text == "")
             {
                 MessageBox.Show("Entrer un nom !");
@@ -51,7 +49,7 @@ namespace McStudent
                     cmd.Parameters.AddWithValue("@mdp", tbx_mdp.ToString());
 
                     SqlDataReader sqlDataReader = cmd.ExecuteReader();
-                    
+
 
                     // SqlDataAdapter da = new SqlDataAdapter(cmd);
                     // DataTable dt = new DataTable();
@@ -61,18 +59,9 @@ namespace McStudent
                     if (sqlDataReader.Read())
                     {
                         MessageBox.Show("Connexion réussie !");
-                        // Accéder à la fenêtre parente
-                        var mainWindow = Window.GetWindow(this) as MainWindow;
-
-                        // Fermer la fenêtre actuelle (Login2)
-                        mainWindow?.Close();
-
-                        // Ou la cacher
-                        // mainWindow?.Hide();
-
-                        // Créer et afficher une nouvelle fenêtre
-                        var newMainWindow = new MainWindow( new Eleve(1, "seb", "seb", "seb"));
+                        var newMainWindow = new MainWindow(new Eleve(1, "seb", "seb", "seb"));
                         newMainWindow.Show();
+                        this.Close();
                     }
                     else
                     {
@@ -87,3 +76,8 @@ namespace McStudent
         }
     }
 }
+
+
+
+
+

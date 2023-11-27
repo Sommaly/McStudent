@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using McStudent.TP;
+using McStudent.Classe;
 
 namespace McStudent
 {
@@ -22,10 +24,12 @@ namespace McStudent
     /// </summary>
     public partial class ListeTp : Page
     {
-        public ListeTp()
+        Eleve eleve;
+        public ListeTp(Eleve e)
         {
             InitializeComponent();
             charger_tp();
+            this.eleve = e;
         }
 
         SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI");
@@ -42,4 +46,5 @@ namespace McStudent
             liste_tp.ItemsSource = dt.DefaultView;
         }
     }
+
 }
