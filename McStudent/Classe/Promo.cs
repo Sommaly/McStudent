@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace McStudent.Classe
 {
-    internal class Promo
+    public class Promo
     {
         public int id { get; set; }
         public string nom {  get; set; }

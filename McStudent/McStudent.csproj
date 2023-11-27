@@ -21,10 +21,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="MVVM\ViewModel\" />
     <Folder Include="MVVM\View\" />
     <Folder Include="MVVM\Model\" />
     <Folder Include="Images\" />
     <Folder Include="Fonts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ClassLibrary1">
+      <HintPath>..\..\..\..\Downloads\DragAssembly.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
