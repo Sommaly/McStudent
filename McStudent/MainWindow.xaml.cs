@@ -70,12 +70,17 @@ namespace McStudent
         }
         private void RadioButton_Checked_deconnexion(object sender, RoutedEventArgs e)
         {
-            this.main_frame.Content = new Deconnexion();
+            this.Close();
         }
 
         private void RadioButton_quit(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void main_frame_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }

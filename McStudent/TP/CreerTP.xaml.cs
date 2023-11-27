@@ -62,7 +62,7 @@ namespace McStudent
                 command.ExecuteNonQuery();
             }
             con.Close();
-            NavigationService.Navigate(new ListeTp());
+            NavigationService.Navigate(new ListeTp(new Eleve(1, "seb", "seb", "seb")));
         }
         int compteur = 0;
 
