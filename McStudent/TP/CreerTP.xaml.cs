@@ -69,7 +69,7 @@ namespace McStudent
         private void creer_tache_Click(object sender, RoutedEventArgs e)
         {
             compteur++;
-            for (int i = 0; i < compteur; i++)
+            for (int i = compteur-1; i < compteur; i++)
             {
                 // Créez une nouvelle TextBox
                 TextBox newTextBox = new TextBox();
