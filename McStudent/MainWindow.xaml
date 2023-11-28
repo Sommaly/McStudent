@@ -46,6 +46,10 @@
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_creerTp"/>
+                <RadioButton Content="Changer le mot de passe"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}" Checked="RadioButton_Checked_changerMdp"/>
                 <RadioButton Content="Quitter"
                              Foreground="White"
                              FontSize="14"
