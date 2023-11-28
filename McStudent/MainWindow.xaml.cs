@@ -50,7 +50,6 @@ namespace McStudent
         {
             this.main_frame.Content = new ListePromo();
         }
-
         private void RadioButton_Checked_creerTp(object sender, RoutedEventArgs e)
         {
             this.main_frame.Content = new CreerTP();
