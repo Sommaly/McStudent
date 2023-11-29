@@ -33,7 +33,7 @@ namespace McStudent
         {
             if (isValid())
             {
-                if (validateUserCredentials(tbx_pseudo.Text, tbx_oldmdp.Password.ToString())) 
+                if (validateUserCredentials(tbx_pseudo.Text, tbx_oldmdp.Password.ToString()))
                 {
                     changePassword(tbx_pseudo.Text, tbx_newmdp.Password.ToString());
                 }
@@ -55,7 +55,7 @@ namespace McStudent
             {
                 MessageBox.Show("Mot de passe requis");
                 return false;
-            } 
+            }
             else if (string.IsNullOrEmpty(tbx_newmdp.Password.ToString()))
             {
                 MessageBox.Show("Nouveau peau de passe requis");
@@ -87,12 +87,13 @@ namespace McStudent
                 if (dt.Rows.Count > 0)
                 {
                     return true;
-                } else { return false; }
+                }
+                else { return false; }
             }
 
         }
 
-        private void changePassword (string pseudo, string newPassword)
+        private void changePassword(string pseudo, string newPassword)
         {
             using (SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI"))
             {
@@ -102,7 +103,7 @@ namespace McStudent
 
                 MessageBox.Show("Mot de jaaj changé avec suces");
 
-                
+
             }
         }
 
