@@ -1,4 +1,5 @@
-﻿using System;
+﻿using McStudent.Classe;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+
 
 namespace McStudent
 {
@@ -33,7 +35,7 @@ namespace McStudent
             {
                 if (validateUserCredentials(tbx_pseudo.Text, tbx_oldmdp.Password.ToString())) 
                 {
-                    changePassword(tbx_pseudo.Text, tbx_newmdp2.Password.ToString());
+                    changePassword(tbx_pseudo.Text, tbx_newmdp.Password.ToString());
                 }
                 else
                 {
@@ -46,27 +48,27 @@ namespace McStudent
         {
             if (string.IsNullOrEmpty(tbx_pseudo.Text))
             {
-                MessageBox.Show("peusdo pastèque non");
+                MessageBox.Show("peusdo requis");
                 return false;
             }
             else if (string.IsNullOrEmpty(tbx_oldmdp.Password.ToString()))
             {
-                MessageBox.Show("Mot de passe reiedrqu");
+                MessageBox.Show("Mot de passe requis");
                 return false;
             } 
             else if (string.IsNullOrEmpty(tbx_newmdp.Password.ToString()))
             {
-                MessageBox.Show("Nouveau peau de passe reiqiured");
+                MessageBox.Show("Nouveau peau de passe requis");
                 return false;
             }
             else if (string.IsNullOrEmpty(tbx_newmdp2.Password.ToString()))
             {
-                MessageBox.Show("peud o passe reuqired");
+                MessageBox.Show("confirmation mot de passe requis");
                 return false;
             }
-            else if (tbx_newmdp != tbx_newmdp2)
+            else if (tbx_newmdp.Password.ToString() != tbx_newmdp2.Password.ToString())
             {
-                MessageBox.Show("il faut les même peua de pmase");
+                MessageBox.Show("il faut les mêmes mots de passe");
                 return false;
             }
             return true;
@@ -75,7 +77,7 @@ namespace McStudent
         {
             using (SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI"))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.eleve WHERE pseudo = '" + pseudo + "' AND password = '" + password + "'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.eleve WHERE pseudo = '" + pseudo + "' AND mdp = '" + password + "'", con);
                 con.Open();
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -94,11 +96,13 @@ namespace McStudent
         {
             using (SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI"))
             {
-                SqlCommand cmd = new SqlCommand("UPDATE dbo.eleve SET PASSWORD = '" + newPassword + "' WHERE pseudo = '" + pseudo + "'", con);
+                SqlCommand cmd = new SqlCommand("UPDATE dbo.eleve SET mdp = '" + newPassword + "' WHERE pseudo = '" + pseudo + "'", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Mot de jaaj changé avec suces");
+
+                
             }
         }
 

@@ -42,8 +42,8 @@ namespace McStudent
 
                 try
                 {
-                    //SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI"); con.Open();
-                    SqlConnection con = new SqlConnection("Data Source=SOMMALY\\SQLEXPRESS;Initial Catalog = mcstudent;Integrated Security=True;Connect Timeout=30;Encrypt=False;");    con.Open();
+                    SqlConnection con = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=mcstudent;Integrated Security=SSPI"); con.Open();
+                    //SqlConnection con = new SqlConnection("Data Source=SOMMALY\\SQLEXPRESS;Initial Catalog = mcstudent;Integrated Security=True;Connect Timeout=30;Encrypt=False;");    con.Open();
                     SqlCommand cmd = new SqlCommand("select * from dbo.eleve where pseudo = @pseudo and mdp = @mdp", con);
                     cmd.Parameters.AddWithValue("@pseudo", tbx_pseudo.Text);
                     cmd.Parameters.AddWithValue("@mdp", tbx_mdp.Password.ToString());
