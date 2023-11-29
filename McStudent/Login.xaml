@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:McStudent"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Title="Login" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Rectangle HorizontalAlignment="Center" Height="450" Stroke="Black" VerticalAlignment="Center" Width="800" Fill="#FF1B1925"/>
         <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Height="22" Margin="0,181,0,0" Name="tbx_pseudo"/>
