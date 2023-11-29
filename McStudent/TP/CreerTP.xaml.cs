@@ -95,7 +95,7 @@ namespace McStudent
                 TextBox nvtbx_tache = new TextBox();
                 nvtbx_tache.Name = "tbx_tache" + compteur;
                 nvtbx_tache.Width = 300;
-                nvtbx_tache.Height = 17.96;
+                nvtbx_tache.Height = 18;
                 // Créez une nouvelle Label
                 Label nvlbl_tache = new Label();
                 nvlbl_tache.Content = "Tache "+compteur;
@@ -106,7 +106,7 @@ namespace McStudent
                 TextBox nvtbx_tacheNote = new TextBox();
                 nvtbx_tacheNote.Name = "tbx_tachenote" + compteur;
                 nvtbx_tacheNote.Width = 300;
-                nvtbx_tacheNote.Height = 17.96;
+                nvtbx_tacheNote.Height = 18;
                 // Créez une nouvelle Label
                 Label nvlbl_tacheNote = new Label();
                 nvlbl_tacheNote.Content = "Note " + compteur;
