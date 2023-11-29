@@ -48,7 +48,7 @@ namespace McStudent
         {
             if (string.IsNullOrEmpty(tbx_pseudo.Text))
             {
-                MessageBox.Show("peusdo requis");
+                MessageBox.Show("pseudo requis");
                 return false;
             }
             else if (string.IsNullOrEmpty(tbx_oldmdp.Password.ToString()))
@@ -58,7 +58,7 @@ namespace McStudent
             }
             else if (string.IsNullOrEmpty(tbx_newmdp.Password.ToString()))
             {
-                MessageBox.Show("Nouveau peau de passe requis");
+                MessageBox.Show("Nouveau mot de passe requis");
                 return false;
             }
             else if (string.IsNullOrEmpty(tbx_newmdp2.Password.ToString()))
@@ -101,7 +101,7 @@ namespace McStudent
                 con.Open();
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Mot de jaaj changé avec suces");
+                MessageBox.Show("Mot de passe changé avec succes");
 
 
             }
